@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eureka Caffe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="nouislider.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="left-logo">
+          <a href="#">
+            <img src="images/logo.png" alt="Eureka Coffe logo" />
+          </a>
+          <a href="#">
+            <p>
+              Eureka <br />
+              Coffe
+            </p>
+          </a>
+        </div>
+        <div class="right-menu">
+          <a href="#">Home </a>
+          <i class="bi bi-circle-fill"></i>
+          <a href="#">About </a>
+          <i class="bi bi-circle-fill"></i>
+          <a href="#">Services </a>
+          <i class="bi bi-circle-fill"></i>
+          <a href="#">Blog </a>
+          <i class="bi bi-circle-fill"></i>
+          <a href="#">Contacts </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="main-content">
+      <div class="welcome-container">
+        <div class="welcome-text">
+          <h2>Eureka Caffe</h2>
+          <p>
+            Satisfy your cravings with our hassle-free online ordering
+            experience. From delectable dishes to your doorstep, we serve up
+            convenience and mouthwatering meals that will leave you craving for
+            more.
+          </p>
+        </div>
+      </div>
+
+      <div class="bar" id="bar-scroll">
+        <div class="categories">
+          <div class="selection">
+            <span onclick="toggleDropdownMenu('arrow1')">
+              Category
+              <i id="arrow1" class="bi bi-caret-down-fill"></i>
+            </span>
+            <span onclick="toggleDropdownMenu('arrow2')">
+              Sorting
+              <i id="arrow2" class="bi bi-caret-down-fill"></i>
+            </span>
+            <span onclick="toggleDropdownMenu('arrow3')">
+              Vegetarian
+              <i id="arrow3" class="bi bi-caret-down-fill"></i>
+            </span>
+          </div>
+
+          <div class="price-filter">
+            <p id="min-slider"></p>
+            <div id="uislider"></div>
+            <p id="max-slider"></p>
+          </div>
+        </div>
+        <div class="cart">
+          <i onclick="toggleCart()" class="bi bi-basket3-fill"></i>
+          <span id="cart-count" class="cart-count"></span>
+          <div id="cart-container" class="cart-container">
+            <h6>Food Order</h6>
+            <ul id="cart-items"></ul>
+            <p id="total-price"></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="menu"></div>
+      <template id="food-item-template">
+        <div class="food-item" data-price="">
+          <div class="food-img">
+            <img src="" alt="Food image" class="food-image" />
+          </div>
+          <div class="food-text">
+            <h6 class="food-name"></h6>
+            <p class="food-description"></p>
+            <p class="food-price"></p>
+          </div>
+          <button class="add-to-cart">
+            <i class="bi bi-basket3-fill"></i>
+          </button>
+        </div>
+      </template>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <p>Assigment 1</p>
+        <p>Oana Istoc - Ruby on Rails Internship</p>
+        <img src="images/wd.png" alt="Wolfpack Digital Logo" />
+      </div>
+    </footer>
+
+    <script src="nouislider.min.js"></script>
+    <script rel="javascript" src="foods.js"></script>
+    <script rel="javascript" src="cart.js"></script>
+    <script rel="javascript" src="index.js"></script>
+    <script rel="javascript" src="filterNouislider.js"></script>
+  </body>
+</html>
